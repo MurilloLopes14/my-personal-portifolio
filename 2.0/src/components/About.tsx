@@ -1,3 +1,5 @@
+import calcDayInterval from "../functions/calcDayInterval";
+
 export const About = () => {
   const aboutItems: { label: string; number: number }[] = [
     {
@@ -6,10 +8,13 @@ export const About = () => {
     },
     {
       label: "Anos de experiência",
-      number: 4,
+      number: 3,
     },
   ];
 
+  const yearsOfCareer = calcDayInterval("2021-07-01");
+
+  console.log(yearsOfCareer);
   return (
     <>
       <section id="about" className="section">
@@ -17,11 +22,11 @@ export const About = () => {
           <div className="bg-zinc-800/50 p-7 rounded-xl md:p-12">
             <p className=" text-zinc-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch] ">
               Seja bem-vindo! Me chamo Murillo, um programador profissional com
-              uma carreira promissora de experiências adquiridas ao longo de 4
-              anos neste vasto mercado de tecnologia. Combinando métodologias
-              modernas com uma lógica dinâmica para construir minha expertise!
-              Eu transformo a idea no ideal, eu coleto conceitos e os transformo
-              em tecnologias que moldam o futuro!
+              uma carreira promissora de experiências adquiridas ao longo de{" "}
+              {yearsOfCareer} neste vasto mercado de tecnologia. Combinando
+              métodologias modernas com uma lógica dinâmica para construir minha
+              expertise! Eu transformo a idea no ideal, eu coleto conceitos e os
+              transformo em tecnologias que moldam o futuro!
             </p>
 
             <div className=" flex flex-wrap items-center gap-4 md:gap-7">

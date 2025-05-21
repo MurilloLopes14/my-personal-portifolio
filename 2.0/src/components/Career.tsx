@@ -1,5 +1,9 @@
+import calcDayInterval from "../functions/calcDayInterval";
+
 type Props = {};
+
 export const Career = ({}: Props) => {
+  const timeWorked = calcDayInterval("2023-04-12");
   return (
     <>
       <section id="career" className="section">
@@ -10,10 +14,9 @@ export const Career = ({}: Props) => {
               Atualmente trabalho como analista de sistemas e desenvolvedor em
               uma empresa da área de saúde de grande porte, uma ditribuidora
               líder no mercado artigos para laboratório, CRAL! Com uma carreira
-              de 1 ano e 4 meses neste ramo de desenvolvimento, sinto-me grato
-              pela posição em que estou e disponível para dialogar sobre
-              tecnologia e oportunidades de estudo para o futuro da minha
-              carreira!
+              de {timeWorked} neste ramo de desenvolvimento, sinto-me grato pela
+              posição em que estou e disponível para dialogar sobre tecnologia e
+              oportunidades de estudo para o futuro da minha carreira!
             </p>
 
             <div className="flex flex-wrap items-center gap-4 md:gap-7">
